@@ -78,6 +78,7 @@ h2{font-size:clamp(34px,6vw,60px);line-height:1;letter-spacing:-.035em;font-weig
 .hero-logo{position:absolute;left:50%;top:50%;width:min(30%,220px);transform:translate(-50%,-50%);border-radius:22px;box-shadow:0 30px 80px rgba(236,30,36,.45)}
 .cyc{width:100%;height:100%;border-radius:var(--r);background:linear-gradient(180deg,#fafafa 0%,#ececee 62%,#dedee1 100%);position:relative;overflow:hidden}
 .cyc::before{content:"";position:absolute;left:-10%;right:-10%;top:58%;height:30%;background:radial-gradient(60% 100% at 50% 0%,rgba(0,0,0,.08),transparent 70%)}
+.cyc .pronto{position:absolute;top:20px;left:20px;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--rojo);color:#fff;padding:6px 12px;border-radius:999px}
 .cyc span{position:absolute;left:24px;bottom:20px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8a8a90}
 .studio-foto{padding:0;background:none}
 /* MEMBERSHIP */
@@ -119,6 +120,7 @@ textarea{min-height:120px;resize:vertical}
 .datos a{font-size:20px;font-weight:600;letter-spacing:-.01em}
 .datos small{display:block;color:var(--gris);font-size:13px;margin-bottom:4px}
 
+.wa{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.2)}
 footer{border-top:1px solid var(--linea);padding:36px 0 48px;color:var(--gris);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
 
@@ -160,7 +162,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
     <h1 class="revelar">Hacemos que tu marca se vea <span class="r" style="white-space:nowrap">de cine.</span></h1>
     <p class="lead revelar">Producción rápida con iPhone e inteligencia artificial cuando necesitas volumen, y producción cinematográfica cuando necesitas impacto. Todo bajo un mismo techo.</p>
     <div class="ctas revelar">
-      <a href="#estudio" class="btn btn-rojo">Reservar el estudio</a>
+      <a href="#estudio" class="btn btn-rojo">Pre-reservar el estudio</a>
       <a href="#produccion" class="btn btn-borde">Cotizar una producción</a>
     </div>
     <div class="hero-media revelar">
@@ -175,20 +177,20 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
     <div class="sec-head revelar">
       <div class="eyebrow">Studio Rental</div>
       <h2>Un estudio listo para crear.</h2>
-      <p>Ciclorama profesional, iluminación de cine y el equipo que necesitas para fotos, video y podcast. Llegas, prendes y grabas.</p>
+      <p>Ciclorama profesional, iluminación de cine y el equipo que necesitas para fotos, video y podcast. Estamos terminando la construcción: pre-reserva y sé de los primeros en grabar.</p>
     </div>
     <div class="studio-grid">
-      <div class="studio-foto revelar"><div class="cyc"><span>Ciclorama profesional</span></div></div>
+      <div class="studio-foto revelar"><div class="cyc"><em class="pronto">Próximamente</em><span>Ciclorama en construcción</span></div></div>
       <div class="card revelar">
         <h3>Qué incluye</h3>
         <ul class="lista">
-          <li>Ciclorama profesional</li>
+          <li>Ciclorama profesional (en construcción, abre pronto)</li>
           <li>Luces Nanlite Forza 500 y Amaran 60, con reflector</li>
           <li>Cámara Sony FX30 con lentes de 9 mm y 50 mm (opcional)</li>
           <li>Espacio para fotografía, video, entrevistas y podcast</li>
         </ul>
-        <div class="precio"><b>Consultar</b><span>tarifa por hora</span></div>
-        <a href="#contacto" class="btn btn-rojo">Ver disponibilidad</a>
+        <div class="precio"><b>Pronto</b><span>tarifa de apertura</span></div>
+        <a href="https://wa.me/19394002220?text=Hola%20Is%C2%B2%2C%20quiero%20pre-reservar%20el%20estudio" class="btn btn-rojo" target="_blank" rel="noopener">Pre-reservar por WhatsApp</a>
       </div>
     </div>
   </div>
@@ -274,15 +276,16 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
     <div class="datos revelar">
       <div class="eyebrow">Contacto</div>
       <h2>Hablemos de tu próximo proyecto.</h2>
+      <div><small>WhatsApp</small><a href="https://wa.me/19394002220" target="_blank" rel="noopener">(939) 400-2220</a><br><a href="https://wa.me/17874328509" target="_blank" rel="noopener">(787) 432-8509</a></div>
       <div><small>Email</small><a href="mailto:is2creativeinc@gmail.com">is2creativeinc@gmail.com</a></div>
-      <div><small>Dominio</small><a href="https://estudiocreativois2.com">estudiocreativois2.com</a></div>
+      <div><small>Redes</small><a href="https://www.instagram.com/is2_creativestudio/" target="_blank" rel="noopener">Instagram @is2_creativestudio</a><br><a href="https://www.facebook.com/profile.php?id=61569223221108" target="_blank" rel="noopener">Facebook Is² Creative Studio</a></div>
     </div>
     <form class="revelar" id="form">
       <label>Nombre<input name="nombre" required autocomplete="name"></label>
       <label>Email<input type="email" name="email" required autocomplete="email"></label>
       <label>Me interesa
         <select name="interes">
-          <option>Reservar el estudio</option>
+          <option>Pre-reservar el estudio</option>
           <option>Creator Membership</option>
           <option>Cotizar una producción</option>
           <option>Photo booth para un evento</option>
@@ -295,10 +298,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
   </div>
 </section>
 
+<a class="wa" href="https://wa.me/19394002220" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.6.7.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5l-.6-.3z"/></svg></a>
 <footer>
   <div class="wrap">
     <span>© <span id="ano">2026</span> Is² Creative LLC</span>
-    <span>Estudio · Creator Membership · Producción</span>
+    <span><a href="https://www.instagram.com/is2_creativestudio/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61569223221108" target="_blank" rel="noopener">Facebook</a> · <a href="https://wa.me/19394002220" target="_blank" rel="noopener">WhatsApp</a></span>
   </div>
 </footer>
 
