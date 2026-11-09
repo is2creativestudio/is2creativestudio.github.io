@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is² Creative Studio — Estudio, contenido y producción</title>
+<meta name="description" content="Is² Creative Studio: alquiler de estudio con ciclorama, Creator Membership y producción de videos comerciales, contenido, branding, podcasts y fotografía.">
+<meta property="og:title" content="Is² Creative Studio">
+<meta property="og:description" content="Estudio, comunidad de creadores y producción audiovisual.">
+<meta property="og:image" content="https://estudiocreativois2.com/logo-is2.png">
+<link rel="canonical" href="https://estudiocreativois2.com/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rojo:#EC1E24; --negro:#0B0B0C; --gris:#6B6B70; --linea:#E6E6E8; --suave:#F5F5F6; --blanco:#fff;
+  --max:1180px; --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter Tight",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--negro);background:var(--blanco);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--linea)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.marca{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+.marca img{width:32px;height:32px;border-radius:7px}
+.menu{display:none;gap:28px;font-size:14px;color:var(--gris)}
+.menu a:hover{color:var(--negro)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:#c9161b}
+.btn-borde{border:1px solid var(--negro)}
+.btn-borde:hover{background:var(--negro);color:#fff}
+.btn-chico{height:38px;padding:0 16px;font-size:14px}
+
+/* HERO */
+.hero{padding:72px 0 56px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo)}
+h1{max-width:14ch;font-size:clamp(44px,9vw,96px);line-height:.95;letter-spacing:-.045em;font-weight:800;margin:18px 0 22px}
+h1 .r{color:var(--rojo)}
+.hero p.lead{font-size:clamp(18px,2.2vw,22px);color:var(--gris);max-width:640px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-media{margin-top:56px;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:
+  radial-gradient(60% 80% at 20% 30%,rgba(236,30,36,.55),transparent 60%),
+  radial-gradient(50% 70% at 85% 70%,rgba(255,255,255,.12),transparent 60%),
+  linear-gradient(135deg,#141416,#050506);position:relative;display:flex;align-items:flex-end}
+.hero-media .tag{margin:20px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-size:13px;backdrop-filter:blur(8px)}
+.hero-media .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+
+/* SECCIONES */
+section{padding:88px 0;border-top:1px solid var(--linea)}
+.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:760px}
+h2{font-size:clamp(34px,6vw,60px);line-height:1;letter-spacing:-.035em;font-weight:800}
+.sec-head p{font-size:18px;color:var(--gris)}
+
+/* STUDIO */
+.studio-grid{display:grid;gap:16px}
+.card{background:var(--suave);border-radius:var(--r);padding:28px}
+.card h3{font-size:21px;letter-spacing:-.02em;margin-bottom:8px}
+.card p{color:var(--gris);font-size:15px}
+.studio-foto{aspect-ratio:4/3;border-radius:var(--r);background:linear-gradient(160deg,#f2f2f3,#dcdcde);display:flex;align-items:center;justify-content:center;color:#9a9aa0;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.lista{list-style:none;display:grid;gap:12px;margin-top:6px}
+.lista li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.lista li::before{content:"";flex:0 0 8px;height:8px;margin-top:8px;border-radius:50%;background:var(--rojo)}
+.precio{display:flex;align-items:baseline;gap:8px;margin:18px 0 22px}
+.precio b{font-size:40px;letter-spacing:-.03em}
+.precio span{color:var(--gris)}
+
+.hero-logo{position:absolute;left:50%;top:50%;width:min(30%,220px);transform:translate(-50%,-50%);border-radius:22px;box-shadow:0 30px 80px rgba(236,30,36,.45)}
+.cyc{width:100%;height:100%;border-radius:var(--r);background:linear-gradient(180deg,#fafafa 0%,#ececee 62%,#dedee1 100%);position:relative;overflow:hidden}
+.cyc::before{content:"";position:absolute;left:-10%;right:-10%;top:58%;height:30%;background:radial-gradient(60% 100% at 50% 0%,rgba(0,0,0,.08),transparent 70%)}
+.cyc span{position:absolute;left:24px;bottom:20px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8a8a90}
+.studio-foto{padding:0;background:none}
+/* MEMBERSHIP */
+.oscuro{background:var(--negro);color:#fff;border-top:none}
+.oscuro .sec-head p,.oscuro .card p{color:#A1A1A8}
+.oscuro .card{background:#17171A}
+.planes{display:grid;gap:16px}
+.plan{position:relative;border:1px solid #2a2a2e}
+.plan.top{border-color:var(--rojo)}
+.plan .badge{position:absolute;top:20px;right:20px;font-size:12px;font-weight:600;color:var(--rojo)}
+.oscuro .lista li{color:#d8d8dc}
+.oscuro .btn-borde{border-color:#fff}
+.oscuro .btn-borde:hover{background:#fff;color:var(--negro)}
+
+/* SERVICIOS */
+.servicios{display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden}
+.serv{background:#fff;padding:28px;display:grid;gap:8px}
+.serv .num{font-size:13px;color:var(--rojo);font-weight:700}
+.serv h3{font-size:22px;letter-spacing:-.02em}
+.serv p{color:var(--gris);font-size:15px}
+
+/* PORTAFOLIO */
+.porta{display:grid;gap:16px}
+.pieza{border-radius:var(--r);overflow:hidden;background:var(--suave)}
+.pieza .img{aspect-ratio:16/10;background:linear-gradient(135deg,#1b1b1e,#0a0a0b);position:relative}
+.pieza .img::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 30% 40%,rgba(236,30,36,.35),transparent 70%)}
+.pieza .txt{padding:18px 20px 22px}
+.pieza .txt small{color:var(--gris);font-size:13px}
+.pieza .txt h3{font-size:18px;letter-spacing:-.01em;margin-top:2px}
+
+/* CONTACTO */
+.contacto{display:grid;gap:32px}
+form{display:grid;gap:14px}
+label{font-size:13px;font-weight:600;color:var(--gris);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:14px 16px;border:1px solid var(--linea);border-radius:12px;background:#fff;color:var(--negro);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--negro);outline-offset:1px}
+textarea{min-height:120px;resize:vertical}
+.datos{display:grid;gap:18px;align-content:start}
+.datos a{font-size:20px;font-weight:600;letter-spacing:-.01em}
+.datos small{display:block;color:var(--gris);font-size:13px;margin-bottom:4px}
+
+footer{border-top:1px solid var(--linea);padding:36px 0 48px;color:var(--gris);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+
+.revelar{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.revelar.ver{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.revelar{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (min-width:760px){
+  .menu{display:flex}
+  .hero{padding:110px 0 72px}
+  section{padding:120px 0}
+  .studio-grid{grid-template-columns:1.15fr 1fr}
+  .planes{grid-template-columns:repeat(3,1fr)}
+  .servicios{grid-template-columns:repeat(3,1fr)}
+  .porta{grid-template-columns:repeat(3,1fr)}
+  .contacto{grid-template-columns:1fr 1.2fr;gap:64px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="marca"><img src="logo-is2.png" alt="Is²">Is² Creative Studio</a>
+    <div class="menu">
+      <a href="#estudio">Studio Rental</a>
+      <a href="#membership">Creator Membership</a>
+      <a href="#produccion">Producción</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a href="#contacto" class="btn btn-rojo btn-chico">Reservar</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow revelar">Estudio · Comunidad · Producción</div>
+    <h1 class="revelar">Hacemos que tu marca se vea <span class="r" style="white-space:nowrap">de cine.</span></h1>
+    <p class="lead revelar">Producción rápida con iPhone e inteligencia artificial cuando necesitas volumen, y producción cinematográfica cuando necesitas impacto. Todo bajo un mismo techo.</p>
+    <div class="ctas revelar">
+      <a href="#estudio" class="btn btn-rojo">Reservar el estudio</a>
+      <a href="#produccion" class="btn btn-borde">Cotizar una producción</a>
+    </div>
+    <div class="hero-media revelar">
+      <img class="hero-logo" src="logo-is2.png" alt="" aria-hidden="true">
+      <div class="tag">Estudio · Contenido · Producción</div>
+    </div>
+  </div>
+</header>
+
+<section id="estudio">
+  <div class="wrap">
+    <div class="sec-head revelar">
+      <div class="eyebrow">Studio Rental</div>
+      <h2>Un estudio listo para crear.</h2>
+      <p>Ciclorama profesional, iluminación de cine y el equipo que necesitas para fotos, video y podcast. Llegas, prendes y grabas.</p>
+    </div>
+    <div class="studio-grid">
+      <div class="studio-foto revelar"><div class="cyc"><span>Ciclorama profesional</span></div></div>
+      <div class="card revelar">
+        <h3>Qué incluye</h3>
+        <ul class="lista">
+          <li>Ciclorama profesional</li>
+          <li>Luces Nanlite Forza 500 y Amaran 60, con reflector</li>
+          <li>Cámara Sony FX30 con lentes de 9 mm y 50 mm (opcional)</li>
+          <li>Espacio para fotografía, video, entrevistas y podcast</li>
+        </ul>
+        <div class="precio"><b>Consultar</b><span>tarifa por hora</span></div>
+        <a href="#contacto" class="btn btn-rojo">Ver disponibilidad</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="membership" class="oscuro">
+  <div class="wrap">
+    <div class="sec-head revelar">
+      <div class="eyebrow">Creator Membership</div>
+      <h2>La casa de los creadores.</h2>
+      <p>Una comunidad para fotógrafos, filmmakers, editores, diseñadores, podcasters y emprendedores. Tu perfil en nuestro directorio, acceso preferente al estudio y gente con quien crear.</p>
+    </div>
+    <div class="planes">
+      <div class="card plan revelar">
+        <h3>Creator</h3>
+        <div class="precio"><b>Pronto</b><span>precio de lanzamiento</span></div>
+        <ul class="lista">
+          <li>Perfil en el directorio de creadores</li>
+          <li>Tarifa de miembro en el estudio</li>
+          <li>Acceso a la comunidad</li>
+        </ul>
+        <div style="margin-top:24px"><a href="#contacto" class="btn btn-borde">Unirme</a></div>
+      </div>
+      <div class="card plan top revelar">
+        <span class="badge">Más popular</span>
+        <h3>Pro</h3>
+        <div class="precio"><b>Pronto</b><span>precio de lanzamiento</span></div>
+        <ul class="lista">
+          <li>Todo lo de Creator</li>
+          <li>Horas de estudio incluidas</li>
+          <li>Perfil destacado en el directorio</li>
+        </ul>
+        <div style="margin-top:24px"><a href="#contacto" class="btn btn-rojo">Unirme</a></div>
+      </div>
+      <div class="card plan revelar">
+        <h3>Studio</h3>
+        <div class="precio"><b>Pronto</b><span>precio de lanzamiento</span></div>
+        <ul class="lista">
+          <li>Todo lo de Pro</li>
+          <li>Más horas y equipo incluido</li>
+          <li>Prioridad en reservas</li>
+        </ul>
+        <div style="margin-top:24px"><a href="#contacto" class="btn btn-borde">Unirme</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="produccion">
+  <div class="wrap">
+    <div class="sec-head revelar">
+      <div class="eyebrow">Production Services</div>
+      <h2>Contenido que vende.</h2>
+      <p>No hacemos solo videos: hacemos piezas que llaman la atención, cuentan tu historia y convierten. De la idea a la entrega en todas las plataformas.</p>
+    </div>
+    <div class="servicios">
+      <div class="serv revelar"><span class="num">01</span><h3>Videos comerciales</h3><p>Spots para TV, cine y redes, entregados en el formato que pide cada cadena.</p></div>
+      <div class="serv revelar"><span class="num">02</span><h3>Creación de contenido</h3><p>Reels y piezas cortas con ritmo, pensadas para retener y crecer.</p></div>
+      <div class="serv revelar"><span class="num">03</span><h3>Branding e identidad</h3><p>Logo, animación de marca y un sistema visual que se reconoce.</p></div>
+      <div class="serv revelar"><span class="num">04</span><h3>Podcasts</h3><p>Producción multicámara, audio limpio y clips listos para redes.</p></div>
+      <div class="serv revelar"><span class="num">05</span><h3>Fotografía</h3><p>Producto, retrato y comercial, con retoque profesional.</p></div>
+      <div class="serv revelar"><span class="num">06</span><h3>Photo booth para eventos</h3><p>Fotos profesionales al momento, con galería en línea para tus invitados.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="portafolio">
+  <div class="wrap">
+    <div class="sec-head revelar">
+      <div class="eyebrow">Portafolio</div>
+      <h2>Trabajo reciente.</h2>
+    </div>
+    <div class="porta">
+      <a class="pieza revelar" href="#"><div class="img"></div><div class="txt"><small>Spot de TV · Concierto</small><h3>Jay Wheeler — La Voz Favorita</h3></div></a>
+      <a class="pieza revelar" href="#"><div class="img"></div><div class="txt"><small>Spot de TV y cine · Evento</small><h3>Encendido de Navidad con los Jacksons</h3></div></a>
+      <a class="pieza revelar" href="#"><div class="img"></div><div class="txt"><small>Reel · Restaurante</small><h3>KUBO Omakase</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap contacto">
+    <div class="datos revelar">
+      <div class="eyebrow">Contacto</div>
+      <h2>Hablemos de tu próximo proyecto.</h2>
+      <div><small>Email</small><a href="mailto:is2creativeinc@gmail.com">is2creativeinc@gmail.com</a></div>
+      <div><small>Dominio</small><a href="https://estudiocreativois2.com">estudiocreativois2.com</a></div>
+    </div>
+    <form class="revelar" id="form">
+      <label>Nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Me interesa
+        <select name="interes">
+          <option>Reservar el estudio</option>
+          <option>Creator Membership</option>
+          <option>Cotizar una producción</option>
+          <option>Photo booth para un evento</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Cuéntanos<textarea name="mensaje" placeholder="Fecha, tipo de proyecto, presupuesto aproximado…"></textarea></label>
+      <button class="btn btn-rojo" type="submit" style="border:0;cursor:pointer">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> Is² Creative LLC</span>
+    <span>Estudio · Creator Membership · Producción</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);
+const asunto=encodeURIComponent('Web Is² — '+f.get('interes'));
+const cuerpo=encodeURIComponent('Nombre: '+f.get('nombre')+'\nEmail: '+f.get('email')+'\nInterés: '+f.get('interes')+'\n\n'+(f.get('mensaje')||''));
+location.href='mailto:is2creativeinc@gmail.com?subject='+asunto+'&body='+cuerpo;});
+document.getElementById('ano').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ver');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.revelar').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
